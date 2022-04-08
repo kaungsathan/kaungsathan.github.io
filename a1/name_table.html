@@ -38,12 +38,11 @@
                 <th>Age</th>
                 </tr>`;
             let tbody = document.querySelector('#tbody');
-            let data = `<tr>
+            tbody.innerHTML += `<tr>
                 <td>${i++}</td>
                 <td>${name}</td>
                 <td>${age}</td>
                 </tr>`;
-            tbody.innerHTML += data;
         }
     </script>
 </body>
