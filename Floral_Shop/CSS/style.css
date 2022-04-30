@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* start nav */
+
+.logo {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.brand_name {
+    position: relative;
+    top: -50px;
+    left: 75px;
+    font-family: lobster;
+    font-size: 17px;
+}
+
+.navbar ul {
+    float: right;
+}
+
+.nav_brand {
+    display: inline-block;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: lobster;
+    src: url(../Lobster/Lobster-Regular.ttf);
+}
+
+.cart {
+    position: relative;
+    top: -13px;
+    left: -7px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 4px 1px 4px;
+}
+
+.navbar ul li a:hover {
+    color: #449ec4;
+    display: inline-block;
+    transform: translate(4px, -5px);
+    transition-duration: 0.4s;
+}
+
+.navbar {
+    height: 80px;
+}
+
+
+/* start background */
+
+.c3 {
+    width: 100%;
+}
+
+.background_text {
+    position: absolute;
+    top: 280px;
+    left: 110px;
+}
+
+.topic {
+    font-family: lobster;
+    font-weight: unset;
+    margin-bottom: 20px;
+}
+
+.shop_button {
+    padding: 5px 8px;
+    margin-top: 15px;
+    border: 1px solid #16aae1;
+    border-radius: 10%;
+    color: #16aae1;
+}
+
+.shop_button:hover {
+    color: white;
+    background-color: #16aae1;
+}
+
+.shop_text {
+    line-height: 25px;
+}
+
+
+/* start latest product */
+
+.product_header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.line {
+    width: 100px;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid #16aae1;
+    background-color: #16aae1;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 40px;
+    text-align: center;
+    line-height: 23px;
+}
+
+.product_image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #000000a1;
+}
+
+.product button {
+    padding: 10px 25px;
+    border: 1px solid #e1ecee;
+    border-radius: 15px;
+    background-color: #e1ecee;
+}
+
+.product button:hover {
+    color: #16aae1;
+    cursor: pointer;
+}
+
+
+/* start about */
+
+.about {
+    background-image: url(../images/f10.jpg);
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.about div hr {
+    width: 30px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* start packaging */
+
+.packaging {
+    margin-left: 100px;
+}
+
+.pk {
+    float: left;
+    width: 45%;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.pk_text {
+    margin-top: 30px;
+    width: 90%;
+    text-align: justify;
+    line-height: 35px;
+}
+
+.pk_text p {
+    margin: 15px 0;
+}
+
+.fa-circle-arrow-right {
+    margin-right: 10px;
+}
