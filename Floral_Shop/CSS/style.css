@@ -180,16 +180,18 @@
 
 .pk {
     float: left;
-    width: 45%;
+    width: 40%;
     margin-top: 30px;
     margin-right: 50px;
 }
 
 .pk_text {
+    float: right;
     margin-top: 30px;
-    width: 90%;
+    margin-right: 60px;
+    width: 50%;
     text-align: justify;
-    line-height: 33px;
+    line-height: 30px;
 }
 
 .pk_text p {
@@ -211,7 +213,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: #e1ecee;
-    margin-top: 50px;
+    margin-top: 80px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -252,4 +254,64 @@
 
 .footer p {
     word-spacing: 5px;
+}
+
+
+/* start contact */
+
+.contact {
+    background-color: #e1ecee;
+    text-align: center;
+    padding: 50px;
+}
+
+.contactus {
+    display: grid;
+    grid-template-columns: 235px 235px 235px 235px;
+    text-align: center;
+    margin: 80px 215px;
+    column-gap: 50px;
+}
+
+.contactus div {
+    background-color: #f6f7f7;
+    padding: 30px;
+    line-height: 25px;
+    border-radius: 5px;
+}
+
+.contactus div p {
+    font-weight: bold;
+}
+
+
+/* start message */
+
+.message {
+    display: grid;
+    grid-template-columns: 500px auto;
+    margin-left: 215px;
+    margin-right: 215px;
+    column-gap: 50px;
+}
+
+.message div form input {
+    width: 100%;
+    height: 35px;
+}
+
+#message {
+    width: 100%;
+    height: 100px;
+}
+
+.contact_label {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.send {
+    float: right;
+    margin-top: 20px;
+    padding: 10px 20px;
 }
