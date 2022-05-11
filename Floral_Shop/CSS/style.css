@@ -261,7 +261,10 @@
   display: grid;
   grid-template-columns: 235px 235px 235px 235px;
   text-align: center;
-  margin: 80px 215px;
+  width: 1089px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
   column-gap: 50px;
 }
 
@@ -359,8 +362,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 90px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .self_container div {
@@ -463,7 +466,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 80px 40px 20px;
+  align-items: center;
+  margin: 80px 14px 20px;
 }
 
 .pro_ctn div {
@@ -473,9 +477,12 @@
 
 .pro_ctn div img {
   border-radius: 5px;
+  width: 269px;
+  height: 330px;
 }
 
 .deli_text {
+  margin-top: 20px;
   font-weight: bold;
   font-size: 19px;
 }
