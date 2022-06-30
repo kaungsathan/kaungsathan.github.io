@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="mybtn">Click</button>
+    <button class="secbtn">Click me</button>
+    <p class="myp">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod numquam
+      praesentium nisi ea placeat ducimus quisquam ex molestias corrupti natus,
+      voluptatibus sunt perferendis repellendus officia adipisci cumque
+      consectetur saepe reiciendis?
+    </p>
+
+    <form action="">
+      <input type="text" name="username" />
+      <br /><br />
+      <input type="number" name="age" />
+      <br /><br />
+      <input type="submit" value="save" />
+    </form>
+
+    <!-- scripts -->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".mybtn").on("click", function () {
+          alert("Clicked the button");
+          $(".myp").hide("slow");
+        });
+
+        // $(".secbtn").on("click", function () {
+        //   $(".myp").hide("slow", function () {
+        //     alert("paragraph is now hidden");
+        //   });
+        // });
+
+        $(".secbtn").on("click", function () {
+          alert("paragraph is now hidden");
+          $(".myp").hide(1000);
+        });
+
+        // form submit
+        $("form").on("submit", function (f) {
+          var name = $("input[name='username']").val();
+          var age = $("input[name='age']").val();
+          console.log(name, age);
+
+          var error = false;
+          if (name.length < 5) {
+            error = true;
+          }
+          if (age < 18) {
+            error = true;
+          }
+
+          if (error) {
+            f.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

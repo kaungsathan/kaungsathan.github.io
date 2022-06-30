@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nulla
+      qui ipsum mollitia eius eos non illo nesciunt reprehenderit, provident
+      animi expedita vero, sint veritatis, doloribus laborum nihil. Velit, illo.
+    </p>
+    <h2 class="name">Kassandra</h2>
+    <button id="mybtn">Click</button>
+
+    <div class="foo">
+      <p>This contain p</p>
+    </div>
+    <div class="foo">
+      <span>This contain span</span>
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        // element selector
+        var p = $("p");
+        console.log(p);
+
+        // class selector
+        var c = $(".name");
+        console.log(c);
+
+        // id selector
+        var d = $("#mybtn");
+        console.log(d);
+
+        var div1 = $("div.foo").has("p");
+        console.log(div1.html());
+        var div2 = $("div.foo").has("span");
+        console.log(div2.text());
+        var div3 = $("div.foo");
+        console.log(div3.text());
+      });
+    </script>
+  </body>
+</html>

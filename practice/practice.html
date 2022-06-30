@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <form action="exm.php" method="post" class="form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" id="phone">
+        <br><br>
+        <select name="type" id="type">
+            <option value="suitable">Student</option>
+            <option value="not_suitable">Employee</option>
+        </select>
+        <br><br>
+        <label for="gender">Gender</label>
+        <br>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        <br><br>
+        <label for="address">Address</label>
+        <br>
+        <textarea name="address" id="address" cols="15" rows="5" placeholder="Address..."></textarea>
+        <br><br>
+        <label for="edu">Eduation</label>
+        <br>
+        <input type="checkbox" name="student" id="student">
+        <label for="student">Student</label>
+        <br>
+        <input type="checkbox" name="academic_stu" id="academic_stu">
+        <label for="academic_stu">Academic Student</label>
+        <br>
+        <input type="checkbox" name="employee" id="employee">
+        <label for="employee">Employee</label>
+        <br><br>
+        <div>
+            <label for="rule">Term & Services</label>
+            <br>
+            <input type="checkbox" name="rule" id="rule">
+            <label for="rule">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae magnam possimus cupiditate culpa fuga cum, nostrum consequatur vero dolorum doloremque nihil a quaerat, fugiat magni quae modi pariatur, voluptatibus accusantium!</label>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

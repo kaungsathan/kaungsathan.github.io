@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        div{
+            background-color: #faf7ff;
+            width: 25%;
+            padding: 15px;
+            border: 10px;
+            border-radius: 5px;
+            margin: 30px;
+            margin-left: 550px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>School Registration Form</h1>
+    <form action="request.php" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="stu_name" id="name" placeholder="Name" required><br><br>
+         
+        <label for="email">Email</label>
+        <input type="email" name="stu_email" id="email" placeholder="Email"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="stu_password" id="password" placeholder="Password"><br><br>
+
+        <label for="phone">Phone</label>
+        <input type="number" name="stu_phone" id="phone" placeholder="Phone"><br><br>
+
+        <label for="passport">Passport:</label><br>
+        <input type="file" id="passport" name="stu_passport" accept="image/*"><br><br>
+
+        <label for="year">Year</label>
+        <select name="stu_year" id="year">
+            <option value="1">First year</option>
+            <option value="2">Second year</option>
+            <option value="3">Third year</option>
+        </select><br>
+
+        <label for="">Gender:</label><br>
+        <input type="radio" name="stu_gender" id="male"><label for="male">Male</label>
+        <input type="radio" name="stu_gender" id="female"><label for="female">Female</label><br>
+
+        <label for="">Hoobies:</label><br>
+        <input type="checkbox" name="animation" id="animation"><label for="animation">Animation</label>
+        <input type="checkbox" name="bonsai" id="bonsai"><label for="bonsai">Bonsai</label>
+        <input type="checkbox" name="travel" id="travel"><label for="travel">Travel</label><br>
+
+        <label for="address">Address:</label><br>
+        <textarea name="stu_address" id="address" cols="30" rows="6" placeholder="Address"></textarea><br>
+
+        <input type="time">
+        <input type="date">
+        <input type="datetime-local">
+        <input type="week">
+        <input type="color">
+        <input type="range" min="0" max="100" value="50">
+        <input type="text" value="Im a programmer" readonly><br>
+        <br><button type="submit">Submit</button>
+    </form>
+    </div>  
+</body>
+</html>

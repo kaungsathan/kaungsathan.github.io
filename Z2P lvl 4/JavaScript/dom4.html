@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <br>
+    <button type="button" onclick="adding()">Add</button>
+
+    <script>
+        function adding(){
+            // alert('hello');
+            let data = [
+                {name:'Mg Mg',age:'32'},
+                {name:'Kg Kg',age:'34'},
+                {name:'Ma Ma',age:'22'},
+                {name:'Hla Hla',age:'33'}
+            ]
+            // console.log(data);
+            let myData = '';
+            let i = 1;
+            for (let val of data){
+                // console.log(val);
+                myData += `<tr>
+                    <td>${i++}</td>
+                    <td>${val.name}</td>
+                    <td>${val.age}</td>
+                    </tr>`;
+            }
+            // console.log(myData);
+            let tbody = document.querySelector('#tbody');
+            // console.log(tbody);
+            tbody.innerHTML = myData;
+        }
+    </script>
+</body>
+</html>

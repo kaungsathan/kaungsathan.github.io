@@ -1,0 +1,272 @@
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+small {
+    display: block;
+    word-spacing: 14px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    text-indent: 50px;
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+
+/* universal selector */
+
+
+/* *{
+    color: brown;
+} */
+
+
+/* attribute selector */
+
+a[title="Google"] {
+    text-decoration: none;
+    color: aqua;
+}
+
+#idSelector {
+    color: burlywood;
+    text-indent: 40px;
+}
+
+.classSelector {
+    color: red;
+    text-indent: 40px;
+}
+
+
+/* descendent selector */
+
+p.desc a {
+    color: red;
+}
+
+
+/* child selector */
+
+p.child>a {
+    color: blue;
+}
+
+
+/* pseudo selector */
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+a:active {
+    color: aqua;
+}
+
+
+/* target */
+
+:target {
+    color: red;
+    word-spacing: 15px;
+    letter-spacing: 5px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+
+/* border */
+
+.borderOne {
+    border: 3px solid red;
+}
+
+.borderTwo {
+    border-left: 5px solid red;
+    border-bottom: 5px dashed red;
+}
+
+.borderWidth {
+    border-width: 5px;
+    border-style: solid;
+}
+
+.borderStyle {
+    border-style: solid;
+}
+
+.bdm {
+    border-style: solid double dashed dotted;
+}
+
+
+/* margin */
+
+.margin {
+    border: 1px solid black;
+    margin: 50px;
+}
+
+.marginTwo {
+    border: 1px solid black;
+    margin-right: 100px;
+}
+
+
+/* padding */
+
+.padding {
+    border: 1px solid black;
+    padding: 40px;
+}
+
+.paddtwo {
+    border: 1px solid black;
+    padding-left: 300px;
+}
+
+
+/* inline */
+
+.inline {
+    border: 1px solid black;
+    display: inline-block;
+    width: 200px;
+}
+
+
+/* block */
+
+.block {
+    border: 1px solid black;
+    width: 200px;
+    /* display: inline; */
+    display: inline-block;
+}
+
+
+/* float */
+
+.float_left img {
+    width: 40%;
+    float: left;
+    margin: 30px;
+}
+
+.float_right img {
+    width: 40%;
+    margin: 30px;
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.gridOne div,
+.gridTwo div,
+.gridThree div,
+.gridFour div,
+.gridFive div,
+.gridSix div {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.gridOne,
+.gridTwo,
+.gridThree,
+.gridFour,
+.gridFive,
+.gridSix {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridTwo {
+    column-gap: 15px;
+}
+
+.gridThree {
+    row-gap: 15px;
+}
+
+.gridFour {
+    gap: 15px;
+}
+
+.add {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.addRow {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+/* position */
+
+.relative_parent {
+    border: 1px solid red;
+    width: 1000px;
+    height: 400px;
+}
+
+.relative {
+    border: 1px solid yellow;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 90px;
+    left: 40px;
+}
+
+.absolute_parent {
+    border: 1px solid black;
+    width: 1000px;
+    height: 400px;
+    position: relative;
+}
+
+.absolute {
+    border: 1px solid green;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 200px;
+}
+
+.fixed {
+    position: fixed;
+    top: 30px;
+    left: 400px;
+}
+
+.online {
+    font-family: "Tapestry", cursive;
+}
+
+@font-face {
+    font-family: water_brush;
+    src: url(Water_Brush/WaterBrush-Regular.ttf);
+}
+
+.offline {
+    font-family: water_brush;
+}
