@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <style>
+      input[type="submit"] {
+        background-color: red;
+        color: white;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 6px;
+      }
+
+      form {
+        width: fit-content;
+        margin: auto;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" name="name" id="name" placeholder="Name..." />
+      <br /><br />
+
+      <label for="hobbies">Hobbies:</label>
+      <br /><br />
+      <input type="checkbox" name="hobbies" id="reading" value="reading" />
+      <label for="reading">Reading</label>
+
+      <input
+        type="checkbox"
+        name="hobbies"
+        id="guitar"
+        value="playing-guitar"
+      />
+      <label for="guitar">Playing guitar</label>
+
+      <input type="checkbox" name="hobbies" id="games" value="playing-games" />
+      <label for="games">Games</label>
+      <br /><br />
+
+      <input type="submit" value="save" />
+    </form>
+
+    <!-- scripts -->
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").on("submit", function (event) {
+          event.preventDefault();
+          var name = $("input[name='name']").val();
+          var reading = $("#reading:checked").val();
+          var guitar = $("#guitar:checked").val();
+          var games = $("#games:checked").val();
+          var data = `My name is ${name}. My hobbies are `;
+
+          if (reading) {
+            data += `${reading} `;
+          }
+
+          if (guitar) {
+            data += `${guitar} `;
+          }
+
+          if (games) {
+            data += `${games} `;
+          }
+
+          alert(data);
+        });
+      });
+    </script>
+  </body>
+</html>
