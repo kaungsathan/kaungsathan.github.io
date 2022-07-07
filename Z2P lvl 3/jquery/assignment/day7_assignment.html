@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7</title>
+    <link rel="stylesheet" href="./day7.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.20/sweetalert2.min.css"
+      integrity="sha512-Yn5Z4XxNnXXE8Y+h/H1fwG/2qax2MxG9GeUOWL6CYDCSp4rTFwUpOZ1PS6JOuZaPBawASndfrlWYx8RGKgILhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="memes_select"></div>
+
+      <div class="selected">
+        <div class="selected_item1"></div>
+
+        <div class="selected_item2">
+          <h3 class="item_name">Meme Name</h3>
+          <form action="" class="input_text">
+            <input type="button" value="Generate" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="test"></div>
+    <!-- script -->
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.20/sweetalert2.min.js"
+      integrity="sha512-ISPBRsvggCFa1YHNMzuhaNqa4vMzTpmxyWhtt01JOmJlbh+nQwAxH49NhbMAGRYviTcH4sy1Wg8SIkBkLyOEGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $.get("https://api.imgflip.com/get_memes", function (res) {
+          console.log(res.data.memes);
+          var memes = res.data.memes;
+          var images = "";
+          for (const meme of memes) {
+            images += `<img src="${meme.url}" data-id="${meme.id}" data-name="${meme.name}" data-box="${meme.box_count}" class="meme_img" alt="${meme.name}">`;
+          }
+
+          $(".memes_select").html(images);
+
+          $(".meme_img").on("click", function () {
+            var url = $(this).attr("src");
+            var name = $(this).data("name");
+            var box = $(this).data("box");
+            var id = $(this).data("id");
+
+            // console.log(url, name, box, id);
+            var img = `<img src="${url}">`;
+            $(".selected_item1").html(img);
+            $(".item_name").html(name);
+
+            var input = "";
+            var generate = `<input type="button" value="Generate" />`;
+
+            for (let i = 0; i < box; i++) {
+              input += `<input type="text" name="text${i + 1}" id="text${
+                i + 1
+              }" placeholder="text${i + 1}..."/>`;
+            }
+            input += generate;
+            $(".input_text").html(input);
+
+            $("input[type='button']").on("click", function () {
+              var user_input = [];
+              for (let i = 0; i < box; i++) {
+                user_input[i] = $(`input[name=text${i + 1}]`).val();
+              }
+              // console.log(user_input);
+
+              $.post(
+                "https://api.imgflip.com/caption_image",
+                {
+                  template_id: id,
+                  username: "KaungsatHan",
+                  password: "Dont@19918",
+                  text0: user_input[0],
+                  text1: user_input[1],
+                  text2: user_input[2],
+                  text3: user_input[3],
+                  text4: user_input[4],
+                  text5: user_input[5],
+                },
+                function (res) {
+                  Swal.fire({
+                    title: name,
+                    text: "Download Here!",
+                    imageUrl: `${res.data.url}`,
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    imageAlt: "Custom image",
+                  });
+                }
+              );
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
