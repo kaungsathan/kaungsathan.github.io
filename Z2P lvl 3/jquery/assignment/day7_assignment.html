@@ -76,7 +76,7 @@
             $("input[type='button']").on("click", function () {
               var user_input = [];
               for (let i = 0; i < box; i++) {
-                user_input[i] = $(`input[name=text${i + 1}]`).val();
+                user_input[i] = { text: $(`input[name=text${i + 1}]`).val() };
               }
               // console.log(user_input);
 
@@ -86,12 +86,7 @@
                   template_id: id,
                   username: "KaungsatHan",
                   password: "Dont@19918",
-                  text0: user_input[0],
-                  text1: user_input[1],
-                  text2: user_input[2],
-                  text3: user_input[3],
-                  text4: user_input[4],
-                  text5: user_input[5],
+                  boxes: user_input,
                 },
                 function (res) {
                   Swal.fire({
@@ -99,7 +94,6 @@
                     text: "Download Here!",
                     imageUrl: `${res.data.url}`,
                     imageWidth: 400,
-                    imageHeight: 200,
                     imageAlt: "Custom image",
                   });
                 }
