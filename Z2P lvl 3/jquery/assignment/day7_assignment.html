@@ -22,8 +22,10 @@
         <div class="selected_item1"></div>
 
         <div class="selected_item2">
-          <h3 class="item_name">Meme Name</h3>
+          <h3 class="item_name">Drake Hotline Bling</h3>
           <form action="" class="input_text">
+            <input type="text" name="text1" id="text1" placeholder="text1..." />
+            <input type="text" name="text2" id="text2" placeholder="text2..." />
             <input type="button" value="Generate" />
           </form>
         </div>
@@ -42,7 +44,7 @@
     <script>
       $(document).ready(function () {
         $.get("https://api.imgflip.com/get_memes", function (res) {
-          console.log(res.data.memes);
+          // console.log(res.data.memes);
           var memes = res.data.memes;
           var images = "";
           for (const meme of memes) {
@@ -50,7 +52,36 @@
           }
 
           $(".memes_select").html(images);
+          var auto_select = `<img src="${memes[0].url}">`;
+          $(".selected_item1").html(auto_select);
 
+          $("input[type='button']").on("click", function () {
+            var text1 = $("#text1").val();
+            var text2 = $("#text2").val();
+
+            $.post(
+              "https://api.imgflip.com/caption_image",
+              {
+                template_id: "181913649",
+                username: "KaungsatHan",
+                password: "Dont@19918",
+                text0: text1,
+                text1: text2,
+              },
+              function (res) {
+                // console.log(res);
+                Swal.fire({
+                  title: name,
+                  text: "Download Here!",
+                  imageUrl: `${res.data.url}`,
+                  imageWidth: 400,
+                  imageAlt: "Custom image",
+                });
+              }
+            );
+          });
+
+          // after select meme photos
           $(".meme_img").on("click", function () {
             var url = $(this).attr("src");
             var name = $(this).data("name");
