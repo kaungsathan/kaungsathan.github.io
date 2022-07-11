@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul.link-wapper {
+        list-style: none;
+        text-align: center;
+      }
+      ul.link-wapper li {
+        display: inline-block;
+        margin: 10px;
+      }
+      ul.link-wapper li a {
+        text-decoration: none;
+        margin: 10px;
+        color: black;
+      }
+      .content {
+        background-color: antiquewhite;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        display: none;
+      }
+      ul.link-wapper li a.active {
+        color: #0037ff;
+        border-bottom: 2px solid red;
+      }
+
+      /* shop */
+      h1 {
+        text-align: center;
+      }
+
+      .container {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        margin: auto;
+      }
+      .item img {
+        width: 100%;
+        height: 190px;
+      }
+      .item {
+        width: 250px;
+        text-align: center;
+      }
+      .item button {
+        background-color: red;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 17px;
+      }
+
+      /* table */
+      table {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <ul class="link-wapper">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#cart">Cart</a></li>
+      </ul>
+
+      <div class="content" id="home">
+        <h2>Home Tab</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          fuga neque autem est fugit placeat mollitia sit ducimus. Quidem
+          voluptatum blanditiis porro excepturi eaque atque ad at officia illo
+          eligendi!
+        </p>
+      </div>
+      <div class="content" id="about">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          fuga neque autem est fugit placeat mollitia sit ducimus. Quidem
+          voluptatum blanditiis porro excepturi eaque atque ad at officia illo
+          eligendi!
+        </p>
+      </div>
+      <div class="content" id="contact">
+        <h2>Contact</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          fuga neque autem est fugit placeat mollitia sit ducimus. Quidem
+          voluptatum blanditiis porro excepturi eaque atque ad at officia illo
+          eligendi!
+        </p>
+      </div>
+
+      <div class="content" id="shop">
+        <h1>My products</h1>
+
+        <div class="container">
+          <div class="item">
+            <img
+              src="./images/how-to-clean-white-sneakers-converse.jpg"
+              alt=""
+            />
+            <h3>Product One</h3>
+            <button data-id="1" data-name="Item One" data-price="1500">
+              Add to cart
+            </button>
+          </div>
+
+          <div class="item">
+            <img
+              src="./images/quicker-sneaker--102190ZH09-worn-1-0-0-1000-1000_b.webp"
+              alt=""
+            />
+            <h3>Product Two</h3>
+            <button data-id="2" data-name="Item Two" data-price="1400">
+              Add to cart
+            </button>
+          </div>
+
+          <div class="item">
+            <img src="./images/whitesneakers-2048px-4187.jpg" alt="" />
+            <h3>Product Three</h3>
+            <button data-id="3" data-name="Item Three" data-price="1300">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="content" id="cart">
+        <h2>Cart</h2>
+
+        <table cellspacing="0" cellpadding="10">
+          <thead class="thead"></thead>
+
+          <tbody class="cartItem"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./product_cart.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".content").first().slideDown();
+
+        $("ul.link-wapper li a").on("click", function () {
+          var current_tab = $(this);
+          $("ul.link-wapper li a").removeClass("active");
+          current_tab.addClass("active");
+
+          $(".content").slideUp();
+          var current_href = current_tab.attr("href");
+          $(current_href).slideDown();
+        });
+      });
+    </script>
+  </body>
+</html>

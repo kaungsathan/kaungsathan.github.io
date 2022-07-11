@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 7</title>
+  </head>
+  <body>
+    <button class="btn_meme">Click</button>
+    <div class="memes"></div>
+
+    <!-- script -->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $.get("https://api.imgflip.com/get_memes", function (resp) {
+          if (resp.success) {
+            console.log(resp.data.memes);
+            var data = "";
+            var memes = resp.data.memes;
+            for (const row of memes) {
+              data += `<img src="${row.url}" width="100px" alt="">`;
+            }
+
+            $(".memes").html(data);
+          }
+        });
+
+        $(".btn_meme").on("click", function () {
+          $.post(
+            "https://api.imgflip.com/caption_image",
+            {
+              template_id: "181913649",
+              username: "KaungsatHan",
+              password: "Dont@19918",
+              text0: "Hi",
+              text1: "Hello",
+            },
+            function (res) {
+              console.log(res);
+
+              if (res.success) {
+                var image = `<img src="${res.data.url}" width="500px" alt="">`;
+                $(".memes").html(image);
+              }
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
