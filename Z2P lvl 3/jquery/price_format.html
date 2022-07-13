@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="" id="element" name="element" />
+    <table>
+      <!-- <tr>
+        <td class="element">5000</td>
+        <td class="element">60000</td>
+        <td class="element">200</td>
+        <td class="element">100000</td>
+      </tr> -->
+    </table>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./price-format-Jquery-Price-Format-a472489/jquery.priceformat.min.js"></script>
+    <script>
+      $(function () {
+        var data = ``;
+        var kk = 5000;
+        data += `
+            <tr>
+                <td class="element">${kk}</td>
+                <td class="element">${5000}</td>
+                <td class="element">${5000}</td>
+                <td class="element">${5000}</td>
+            </tr>        
+        `;
+        $("table").html(data);
+
+        $(".element").priceFormat({
+          prefix: "",
+          suffix: " MMK",
+          centsLimit: 3,
+          centsSeparator: ",",
+        });
+      });
+    </script>
+  </body>
+</html>

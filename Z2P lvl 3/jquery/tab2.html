@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tab</title>
     <style>
       ul.link-wapper {
         list-style: none;
@@ -115,7 +115,12 @@
               alt=""
             />
             <h3>Product One</h3>
-            <button data-id="1" data-name="Item One" data-price="1500">
+            <button
+              class="productbtn"
+              data-id="1"
+              data-name="Item One"
+              data-price="1500"
+            >
               Add to cart
             </button>
           </div>
@@ -126,7 +131,12 @@
               alt=""
             />
             <h3>Product Two</h3>
-            <button data-id="2" data-name="Item Two" data-price="1400">
+            <button
+              class="productbtn"
+              data-id="2"
+              data-name="Item Two"
+              data-price="1400"
+            >
               Add to cart
             </button>
           </div>
@@ -134,7 +144,12 @@
           <div class="item">
             <img src="./images/whitesneakers-2048px-4187.jpg" alt="" />
             <h3>Product Three</h3>
-            <button data-id="3" data-name="Item Three" data-price="1300">
+            <button
+              class="productbtn"
+              data-id="3"
+              data-name="Item Three"
+              data-price="1300"
+            >
               Add to cart
             </button>
           </div>
@@ -144,7 +159,7 @@
       <div class="content" id="cart">
         <h2>Cart</h2>
 
-        <table cellspacing="0" cellpadding="10">
+        <table id="table" cellspacing="0" cellpadding="10">
           <thead class="thead"></thead>
 
           <tbody class="cartItem"></tbody>
@@ -153,6 +168,7 @@
     </div>
 
     <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./price-format-Jquery-Price-Format-a472489/jquery.priceformat.min.js"></script>
     <script src="./product_cart.js"></script>
     <script>
       $(document).ready(function () {
