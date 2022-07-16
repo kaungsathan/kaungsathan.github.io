@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+    <link rel="stylesheet" href="./countries.css" />
+  </head>
+  <body>
+    <button class="back">Back</button>
+
+    <div class="result_container"></div>
+
+    <form action="">
+      <input
+        type="search"
+        name="search"
+        id="userInput"
+        placeholder="Search..."
+      />
+
+      <select name="region" id="region">
+        <option value="all">All Region</option>
+        <option value="africa">Africa</option>
+        <option value="ame">Americas</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+      </select>
+    </form>
+
+    <div class="container"></div>
+
+    <!-- script -->
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".result_container").hide();
+        $(".back").hide();
+
+        showItem("https://restcountries.com/v3.1/all");
+
+        $("select").on("change", function () {
+          var region = $(this).val();
+
+          if (region == "africa") {
+            showItem("https://restcountries.com/v3.1/region/africa");
+          } else if (region == "ame") {
+            showItem("https://restcountries.com/v3.1/region/america");
+          } else if (region == "asia") {
+            showItem("https://restcountries.com/v3.1/region/asia");
+          } else if (region == "europe") {
+            showItem("https://restcountries.com/v3.1/region/europe");
+          } else if (region == "oceania") {
+            showItem("https://restcountries.com/v3.1/region/oceania");
+          } else {
+            showItem("https://restcountries.com/v3.1/all");
+          }
+        });
+
+        $("#userInput").on("keyup", function () {
+          var search = $(this).val();
+
+          if (search == "") {
+            showItem("https://restcountries.com/v3.1/all");
+          } else {
+            showItem(`https://restcountries.com/v3.1/name/${search}`);
+          }
+        });
+
+        $(".back").on("click", function () {
+          $(".result_container").hide();
+          $(".back").hide();
+          $(".container").show();
+          $("form").show();
+        });
+
+        function showItem(api) {
+          $.get(api, function (res) {
+            // console.log(res);
+            var countries = res;
+            var card = ``;
+
+            $(countries).each(function (i, v) {
+              card += `
+              <div class="item">
+                <a href="#" data-index="${i}">
+                  <div class="card">
+                    <img src="${v.flags.svg}" alt="${v.altSpellings[1]}" />
+                    <h3>${v.name.common}</h3>
+                    <span>Population:</span><small>${v.population}</small> <br /><br />
+                    <span>Region:</span><small>${v.region}</small> <br /><br />
+                    <span>Capital:</span><small>${v.capital}</small> <br /><br />
+                  </div>
+                </a>
+              </div>
+            `;
+            });
+
+            $(".container").html(card);
+
+            $(".item a").on("click", function (event) {
+              event.preventDefault();
+              $(".result_container").show();
+              $(".back").show();
+              $(".container").hide();
+              $("form").hide();
+
+              var index = $(this).data("index");
+              var data = countries[index];
+              var currenciesObject;
+              var currencies_values;
+              var currencies;
+              // console.log(data);
+
+              // currencies
+              if (data.currencies) {
+                currenciesObject = data.currencies;
+                currencies_values = Object.values(currenciesObject);
+                currencies = [];
+
+                $(currencies_values).each(function (i, v) {
+                  currencies = v.name;
+                });
+              } else {
+                currencies = 0;
+              }
+
+              // languages
+              var languagesObject = data.languages;
+              var languages_values = Object.values(languagesObject);
+
+              var showData = `
+                <div class="result_item1">
+                  <img src="${data.flags.svg}" alt="" />
+                </div>
+
+                <div class="result_item2">
+                  <h3>${data.name.common}</h3>
+
+                  <div class="stat_container">
+                    <div class="stat_item">
+                      <span>Native Name:</span><small>${data.name.official}</small> <br /><br />
+                      <span>Population:</span><small>${data.population}</small> <br /><br />
+                      <span>Region:</span><small>${data.region}</small> <br /><br />
+                      <span>Sub Region:</span><small>${data.subregion}</small><br /><br />
+                      <span>Capital:</span><small>${data.capital}</small> <br /><br />
+                    </div>
+
+                    <div class="stat_item">
+                      <span>Top Level Domain:</span><small>${data.tld}</small> <br /><br />
+                      <span>Currencies:</span><small>${currencies}</small> <br /><br />
+                      <span>Languages:</span><small>${languages_values}</small>
+                    </div>
+                  </div>
+                </div>
+            `;
+
+              $(".result_container").html(showData);
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

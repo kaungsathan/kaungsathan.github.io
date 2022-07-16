@@ -44,7 +44,7 @@
     <script>
       $(document).ready(function () {
         $.get("https://api.imgflip.com/get_memes", function (res) {
-          // console.log(res.data.memes);
+          console.log(res.data.memes);
           var memes = res.data.memes;
           var images = "";
           for (const meme of memes) {
@@ -105,7 +105,7 @@
             $(".input_text").html(input);
 
             $("input[type='button']").on("click", function () {
-              var user_input = [];
+              var user_input = new Array();
               for (let i = 0; i < box; i++) {
                 user_input[i] = { text: $(`input[name=text${i + 1}]`).val() };
               }
