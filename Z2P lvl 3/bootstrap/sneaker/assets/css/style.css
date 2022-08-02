@@ -1,0 +1,91 @@
+* {
+  font-family: QuattrocentoSans_Regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Oswald_Bold;
+}
+
+.customnav-color {
+  background-color: #2f333a;
+}
+
+.mainColor {
+  color: #eb3e32;
+}
+
+.mainBgColor {
+  background-color: #eb3e32;
+}
+
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.btn-custom {
+  background-color: #eb3e32 !important;
+  color: #fff !important;
+}
+
+.btn-custom:hover {
+  background-color: #bc3228 !important;
+  border-color: #bc3228 !important;
+}
+
+/* product img */
+div.card img {
+  height: 100%;
+}
+
+
+/* letter */
+#newsletter {
+  background: url("../images/slide3.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.facebook {
+  color: #3c5b9b;
+}
+
+.grayColor {
+  color: #999;
+}
+
+.twitter {
+  color: #40c1df;
+}
+
+.instagram {
+  color: #c619b8;
+}
+
+.gg-plus {
+  color: #ed3c32;
+}
+
+.dribble {
+  color: #c72982;
+}
+
+.pinterest {
+  color: #e60023;
+}
+
+@media (max-width: 767px) {
+  #payment {
+    display: flex;
+    justify-content: center;
+  }
+
+  #copyright {
+    text-align: center;
+  }
+}
