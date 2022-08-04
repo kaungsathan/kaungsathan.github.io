@@ -34,6 +34,7 @@ const app2 = Vue.createApp({
             totalInch: '',
             semiBmi: '',
             finalBmi: '',
+            result: '',
         }
     },
     
@@ -42,6 +43,7 @@ const app2 = Vue.createApp({
             this.totalInch = (this.feet * 12) + (this.inch);
             this.semiBmi = this.pound * 703;
             this.finalBmi = this.semiBmi / (this.totalInch * this.totalInch);
+            this.result = this.finalBmi.toFixed(1);
         }
     },
 });
