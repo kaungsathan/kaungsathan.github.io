@@ -64,7 +64,7 @@
 
             <div class="text-center mt-5 pb-1">
               <p class="h6">Your BMI: {{result}}</p>
-              <p v-if="result <= 18.5 && result >= 0" class="text-primary">You're underweight</p>
+              <p v-if="result <= 18.5 && result > 0" class="text-primary">You're underweight</p>
               <p v-else-if="result >= 18.5 && result <= 24.9" class="text-success">You're normal weight</p>
               <p v-else-if="result >= 25 && result <= 29.9" class="text-warning">You're overweight</p>
               <p v-else-if="result >= 30" class="text-danger">You're obesity</p>
