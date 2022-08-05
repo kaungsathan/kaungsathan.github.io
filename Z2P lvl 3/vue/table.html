@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./main.js"></script>
+    <style>
+        table {
+            text-align: center;
+            border-spacing: 0;
+            border: 1px solid black;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr v-for="(student,index) in students">
+                    <td>{{(index+1)}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.age}}</td>
+                    <td>{{student.gender}}</td>
+                    <td><button @click="detail(index)">Detail</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const mountApp = table.mount('#app');
+    </script>
+</body>
+</html>

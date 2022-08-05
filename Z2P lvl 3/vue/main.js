@@ -47,3 +47,47 @@ const app2 = Vue.createApp({
         }
     },
 });
+
+const ex2 = Vue.createApp({
+    data() {
+        return {
+            age: Number,
+            isButtonDisable: true,
+            age: Number,
+        }
+    },
+
+    methods: {
+        btn() {
+            if (this.age >= 18) {
+                this.isButtonDisable = false;
+            } else {
+                this.isButtonDisable = true;
+            }
+        },
+
+        validate() {
+            alert("validate");
+        }
+    },
+});
+
+const table = Vue.createApp({
+    data() {
+        return {
+            students: [
+                { name: 'Mg Mg', age: 23, gender: 'male' },
+                { name: 'Su Su', age: 20, gender: 'female' },
+                { name: 'Bo Bo', age: 22, gender: 'male' },
+            ],
+            message: '',
+        }
+    },
+
+    methods: {
+        detail(index) {
+            this.message = `My name is ${this.students[index].name} and I'm ${this.students[index].age} years old.`;
+            alert(this.message);
+        }
+    },
+});
