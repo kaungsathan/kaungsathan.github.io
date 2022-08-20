@@ -91,3 +91,46 @@ const table = Vue.createApp({
         }
     },
 });
+
+const api = Vue.createApp({
+    data() {
+        return {
+            items: Array(),
+        }
+    },
+
+    mounted() {
+        
+        axios.get('https://api.imgflip.com/get_memes')
+            .then(response => {
+                // handle success
+                console.log(response.data.data.memes);
+                if (response) {
+                    this.items = response.data.data.memes;
+                }
+            })
+            
+    },
+});
+
+const ex3 = Vue.createApp({
+    data() {
+        return {
+            students: [
+                { name: 'Mg Mg', age: 16, gender: 'male' },
+                { name: 'Su Su', age: 20, gender: 'female' },
+                { name: 'Bo Bo', age: 22, gender: 'male' },
+            ],
+        }
+    },
+
+    computed: {
+        boys() {
+            return this.students.filter(row => row.gender == 'male');
+        },
+
+        adults() {
+            return this.students.filter(row => row.age >= 18);
+        }
+    },
+})
