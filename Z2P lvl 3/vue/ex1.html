@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <!-- raw html -->
+        <p v-html="message"></p>
+
+        <!-- attribute bind -->
+        <img v-bind:src="photo">
+
+        <!-- if else condition -->
+
+        <div v-if="color.length > 2">
+            <div v-for="item in color">{{item}}</div>
+        </div>
+        <div v-else>
+            Array not exist!
+        </div>
+
+        <ol>
+            <li v-for="(item,index) in student">
+                <span>{{index}}</span>{{item.name}}
+            </li>
+        </ol>
+
+        <!-- event listen -->
+        <p>Count is : {{count}}</p>
+        <button @click="count++">Add 1</button>
+
+        <button @click="openAlert('ha ha')">Open alert</button>
+
+        <!-- input binding -->
+        <input type="text" name="name" v-model="username">
+        <p>{{username}}</p>
+
+        <input type="number" v-model.number="age">
+        <p>{{age}}</p>
+
+
+    </div>
+
+    <script>
+        const mountApp = ap.mount("#app");
+    </script>
+</body>
+
+</html>

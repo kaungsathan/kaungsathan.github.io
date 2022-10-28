@@ -1,24 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zero 2 Pro Lv4</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
-  <body>
-    <a href="index.html">HOME</a>|
-    <a href="about.html">ABOUT</a>
-    <h1>Zero to Pro</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaung Sat Han</title>
 
-    <ul>
-      <li><a href="./Z2P lvl 4/a1/index.html">Assignment lvl 4</a></li>
-      <li><a href="./Z2P lvl 3/assignment/index.html">Assignment lvl 3</a></li>
-      <li><a href="./Z2P lvl 4/Floral_Shop/index.html">Floral_shop</a></li>
-      <li><a href="./Z2P lvl 4/kaung_kitchen/index.html">kaung_kitchen</a></li>
-      <li><a href="./Z2P lvl 3/bootstrap/sneaker/index.html">Sneaker Shop</a></li>
-    </ul>
-  </body>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Aos animate scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- nav start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary" href="#home">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-primary active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#skill">Skill</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#project">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="./ui_projects_&_bmi_calculator.html" target="_blank">UI-Projects</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- nav end -->
+
+  <!-- home start -->
+  <section id="home" class="px-4" style="height: 60vh;">
+    <div class="container-lg">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="text-center">
+            <img src="./image/Hand coding-pana.png" class="my-3 w-100 animate__animated animate__backInRight"
+              alt="profile">
+          </div>
+        </div>
+        <div class="col-md-6 order-md-first animate__animated animate__backInLeft">
+          <p class="text-muted mb-1">HI, I'm</p>
+          <h1 class="text-primary text-uppercase fs-1 fw-bold">Web Developer</h1>
+          <h2 class="fs-4">
+            <i class="fa-solid fa-less-than"></i> Kaung Sat Han <i class="fa-solid fa-greater-than"></i>
+          </h2>
+
+          <div class="text-muted mt-4">Welcome to my portfolio.</div>
+          <p class="text-muted">I'm a full-stack web developer based in Yangon, Myanmar.</p>
+
+          <a href="#" class="btn btn-primary px-4 mt-3">CV Form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- home end -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#edeeef" fill-opacity="1"
+      d="M0,128L120,138.7C240,149,480,171,720,170.7C960,171,1200,149,1320,138.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+    </path>
+  </svg>
+
+  <!-- skill section start-->
+  <div id="skill" class="px-4" style="background-color: #edeeef;">
+    <div class="container-lg">
+      <div class="row mb-5">
+        <div>
+          <h2 class="text-center fw-bold">About Me</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 mt-4">
+          <h3 class="mt-3 text-center">Bio</h3>
+
+          <p class="text-muted lh-lg my-4">
+            I like to think of myself as a polyglot developer. I can make Laravel web applications with Vue Js, but I
+            also still have a lot
+            to learn.
+            I'm a full-stack web developer with an eye for clean and functional design.
+            I am passionate about web development and want to learn new things every day. I am currently working as a
+            freelance
+            developer. I also do some blogging on my personal website.
+            I love to make web applications and I'm improving with my coding skills.
+          </p>
+
+          <div class="row my-4">
+            <div class="col-4">
+              <div class="text-center">
+                <h4 class="fs-1 fw-bold">10+</h4>
+                <small class="text-muted">Project Completed</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center">
+                <h4 class="fs-1 fw-bold">3+</h4>
+                <small class="text-muted">Laravel Project Completed</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="text-center">
+                <h4 class="fs-1 fw-bold">3+</h4>
+                <small class="text-muted">Vue Project Completed</small>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://github.com/kaungsathan" target="_blank" class="btn btn-primary px-4 mt-3">Github</a>
+        </div>
+
+        <div class="col-md-6 mt-4">
+          <h3 class="mt-3 mb-4 text-center">Skill</h3>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">HTML</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 70%;"
+                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">CSS</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 65%;"
+                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">Bootstrap</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 60%;"
+                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">JavaScript (Vue)</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 65%;"
+                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">PHP (Laravel)</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 65%;"
+                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h3 class="my-3 fs-5">Java - OOP</h3>
+            <div class="progress bg-secondary" style="height: 4px;">
+              <div class="progress-bar bg-primary" role="progressbar" aria-label="Example 1px high" style="width: 65%;"
+                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- skill section end -->
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#edeeef" fill-opacity="1"
+      d="M0,128L120,138.7C240,149,480,171,720,170.7C960,171,1200,149,1320,138.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+    </path>
+  </svg>
+
+  <!-- edu section start -->
+  <div class="container" id="project" data-aos="fade-up">
+    <div>
+      <div class="row">
+
+        <h2 class="text-center fw-bold mb-5">Education</h2>
+
+        <div class="row mx-auto gx-5">
+          <div class="col-lg-6 mb-5 h-100">
+            <div class="project-item bg-white rounded p-4 h-100">
+              <i class="fa-solid fa-user-graduate text-primary mb-4 fs-1"></i>
+
+              <h5 class="mb-3">Technological University Hinthata</h5>
+              <p>
+                I started my higher education at 2017 by attending Technological University (TU). Major is Electronic
+                Communication (EC). I dropped out of University
+                in my third year due to some situation.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 h-100">
+            <div class="project-item bg-white rounded p-4 h-100">
+              <i class="fa-solid fa-book-open-reader text-success mb-4 fs-1"></i>
+
+              <h5 class="mb-3">B.E.H.S (1) North Okkalapa, Yangon</h5>
+              <p>
+                At 2015, I attended my Grade 10 class at B.E.H.S (1), North Okkalapa, Yangon. I had passed my grade 10
+                class at 2016, and then I
+                attended Grade 11 class at that year. I passed with one distinction in my certificate Biology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- edu section end -->
+
+  <!-- project start -->
+  <section id="project" class="my-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center mb-5">
+            <h2 class="fw-bold">Some of my projects</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (72).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Order system</h3>
+            <p>Laravel + Ajax</p>
+            <p>Admin - admin@gmail.com</p>
+            <p>Password - admin123</p>            
+            <p class="">
+              <a href="https://github.com/kaungsathan/pizza-order-system" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (73).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Daily news system</h3>
+            <p>Vue + Laravel + Api</p>
+            <p>Admin management board</p>
+            <p>Admin - admin@gmail.com</p>
+            <p>Password - admin123</p>            
+            <p class="">
+              <a href="https://github.com/kaungsathan/media-app" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (74).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Project management</h3>
+            <p>Vue + Laravel + Api</p>
+            <p class="">
+              <a href="https://github.com/kaungsathan/project-management" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (75).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Fake store</h3>
+            <p>Vue + fakestore api</p>
+
+            <p class="">
+              <a href="https://fakestore-vuexapp.netlify.app/" target="_blank" class="text-primary text-decoration-none">Demo</a>
+            </p>
+
+            <p class="">
+              <a href="https://github.com/kaungsathan/fakestore-vuexApp" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>                       
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (76).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Rest Countries</h3>
+            <p>jquery + rest countries api</p>
+            <p>Frontend Mentor Challenge</p>  
+
+            <p class="">
+              <a href="https://kaungsathan.github.io/Z2P%20lvl%203/jquery/assignment/countries_assignment.html" target="_blank" class="text-primary text-decoration-none">Demo</a>
+            </p>
+
+            <p class="">
+              <a href="https://github.com/kaungsathan/kaungsathan.github.io/blob/main/Z2P%20lvl%203/jquery/assignment/countries_assignment.html" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-3">
+          <div class="items">
+            <img src="./image/Screenshot (77).png" class="w-100 img-thumbnail shadow-sm" />
+            <h3 class="fs-5 my-2">Memes generator</h3>
+            <p>jquery + Imgflip api</p>
+
+            <p class="">
+              <a href="https://kaungsathan.github.io/Z2P%20lvl%203/jquery/assignment/day7_assignment.html" target="_blank" class="text-primary text-decoration-none">Demo</a>
+            </p>
+
+            <p class="">
+              <a href="https://github.com/kaungsathan/kaungsathan.github.io/blob/main/Z2P%20lvl%203/jquery/assignment/day7_assignment.html" target="_blank" class="text-primary text-decoration-none">Github</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+  <!-- project end -->
+
+  <!-- contact start -->
+  <div id="contact" class="container p-4 my-5" data-aos="fade-up">
+    <h2 class="fw-bold text-center mb-3">Contact me</h2>
+    <p class="text-center mb-5">I am available for contract work, when you're ready - let me know!</p>
+
+    <div class="row mx-auto col-md-6 col-sm-12 col-12">
+      <div class="col-6">
+        <div class="card mx-auto h-100">
+          <div class="card-body">
+            <div class="text-center">
+              <i class="fa-solid fa-envelope text-danger mb-4 fs-1"></i>
+            </div>
+            <div class="text-center fs-sm-5">kaungsathun19918@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card mx-auto h-100">
+          <div class="card-body">
+            <div class="text-center">
+              <i class="fa-solid fa-mobile text-primary mb-4 fs-1"></i>
+            </div>
+            <div class="text-center">+959797756716</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact end -->
+
+  <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(68.248, 119.344, 202.954, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(125.605, 163.58, 225.722, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+      d="M0,40L48,45C96,50,192,60,288,60C384,60,480,50,576,40C672,30,768,20,864,15C960,10,1056,10,1152,21.7C1248,33,1344,57,1440,60C1536,63,1632,47,1728,35C1824,23,1920,17,2016,23.3C2112,30,2208,50,2304,61.7C2400,73,2496,77,2592,68.3C2688,60,2784,40,2880,35C2976,30,3072,40,3168,45C3264,50,3360,50,3456,46.7C3552,43,3648,37,3744,40C3840,43,3936,57,4032,53.3C4128,50,4224,30,4320,25C4416,20,4512,30,4608,43.3C4704,57,4800,73,4896,73.3C4992,73,5088,57,5184,48.3C5280,40,5376,40,5472,38.3C5568,37,5664,33,5760,28.3C5856,23,5952,17,6048,11.7C6144,7,6240,3,6336,1.7C6432,0,6528,0,6624,6.7C6720,13,6816,27,6864,33.3L6912,40L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(62, 117, 207, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(62, 117, 207, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)"
+      d="M0,50L48,50C96,50,192,50,288,50C384,50,480,50,576,41.7C672,33,768,17,864,16.7C960,17,1056,33,1152,35C1248,37,1344,23,1440,20C1536,17,1632,23,1728,33.3C1824,43,1920,57,2016,65C2112,73,2208,77,2304,71.7C2400,67,2496,53,2592,41.7C2688,30,2784,20,2880,26.7C2976,33,3072,57,3168,70C3264,83,3360,87,3456,75C3552,63,3648,37,3744,35C3840,33,3936,57,4032,68.3C4128,80,4224,80,4320,71.7C4416,63,4512,47,4608,40C4704,33,4800,37,4896,38.3C4992,40,5088,40,5184,48.3C5280,57,5376,73,5472,80C5568,87,5664,83,5760,73.3C5856,63,5952,47,6048,46.7C6144,47,6240,63,6336,65C6432,67,6528,53,6624,51.7C6720,50,6816,60,6864,65L6912,70L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z">
+    </path>
+    <defs>
+      <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+        <stop stop-color="rgba(62, 117, 207, 1)" offset="0%"></stop>
+        <stop stop-color="rgba(62, 117, 207, 1)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+    <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)"
+      d="M0,20L48,28.3C96,37,192,53,288,56.7C384,60,480,50,576,48.3C672,47,768,53,864,51.7C960,50,1056,40,1152,45C1248,50,1344,70,1440,78.3C1536,87,1632,83,1728,75C1824,67,1920,53,2016,45C2112,37,2208,33,2304,38.3C2400,43,2496,57,2592,51.7C2688,47,2784,23,2880,15C2976,7,3072,13,3168,25C3264,37,3360,53,3456,51.7C3552,50,3648,30,3744,23.3C3840,17,3936,23,4032,23.3C4128,23,4224,17,4320,11.7C4416,7,4512,3,4608,13.3C4704,23,4800,47,4896,55C4992,63,5088,57,5184,60C5280,63,5376,77,5472,78.3C5568,80,5664,70,5760,70C5856,70,5952,80,6048,85C6144,90,6240,90,6336,81.7C6432,73,6528,57,6624,45C6720,33,6816,27,6864,23.3L6912,20L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z">
+    </path>
+  </svg>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white">
+
+    <!-- Copyright -->
+    <div class="text-center p-2" style="background-color: #3e75cf;">
+      ©
+      <script>document.write(new Date().getFullYear())</script> Design By Me
+      <a class="text-reset fw-bold" href="https://www.facebook.com/jetsus.jetsus/" target="_blank"><i
+          class="fa-brands fa-facebook ms-2 fs-5"></i></a>
+      <a class="text-reset fw-bold" href="https://t.me/kaungsat_han" target="_blank"><i
+          class="fa-brands fa-telegram ms-2 fs-5"></i></a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- MDB javaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+
+  <!-- Aos javascript animate -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>
